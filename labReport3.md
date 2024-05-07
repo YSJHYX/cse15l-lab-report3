@@ -21,3 +21,37 @@ Bug in method `reversed()`: <br>
   }
 ```
 - ## Symptom
+
+   Test Fail Screenshot:
+
+  ![Image](testFail.png)
+
+   Test Pass Screenshot:
+
+ ![Image](testPass.png)
+
+- ## Bug <br>
+Original code:
+
+```
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }
+```
+
+
+  Code after changing:
+
+```
+  static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+  }
+```
