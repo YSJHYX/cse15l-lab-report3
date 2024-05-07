@@ -76,3 +76,19 @@ harry@HarrydeMacBook-Pro technical % grep -c -r "report" | head -n 10
 ```
 
 When I ran the command, it counted the occurrence of the word "report" in files under the directory `technical`, and then it showed the output to the first 10 lines. This command is useful since it can quickly find out where specific keywords or phrases occur in multiple files within a director, it also counts the occurrence of the keywords in each file.
+
+```
+harry@HarrydeMacBook-Pro technical % grep -c -r "report" | sort -t ":" -k 3 -n | head -n 10
+./911report/chapter-1.txt:56
+./911report/chapter-10.txt:6
+./911report/chapter-11.txt:17
+./911report/chapter-12.txt:5
+./911report/chapter-13.1.txt:21
+./911report/chapter-13.2.txt:140
+./911report/chapter-13.3.txt:226
+./911report/chapter-13.4.txt:631
+./911report/chapter-13.5.txt:325
+./911report/chapter-2.txt:17
+```
+
+Running this command searches for the occurrences of the word "report" in files under the directory `technical`. After counting the occurrences of each match, it sorts the results based on the 3rd field (the file path) using ":" as the field separator, in numerical order, and then shows the first 10 lines of the sorted output.
