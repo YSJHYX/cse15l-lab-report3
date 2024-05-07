@@ -20,3 +20,4 @@ Bug in method `reversed()`: <br>
     assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
   }
 ```
+- ## Symptom
