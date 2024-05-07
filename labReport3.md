@@ -92,3 +92,8 @@ harry@HarrydeMacBook-Pro technical % grep -c -r "report" | sort -t ":" -k 3 -n |
 ```
 
 Running this command searches for the occurrences of the word "report" in files under the directory `technical`. After counting the occurrences of each match, it sorts the results based on the 3rd field (the file path) using ":" as the field separator, in numerical order, and then shows the first 10 lines of the sorted output.
+
+By using this command, we are able to effectively find the files where the word "report" occurs most frequently and display the top 10 files based on the count of occurrences.
+
+
+- -l: displays only filenames that contain the pattern
