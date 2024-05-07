@@ -74,3 +74,5 @@ harry@HarrydeMacBook-Pro technical % grep -c -r "report" | head -n 10
 ./government/About_LSC/ONTARIO_LEGAL_AID_SERIES.txt:3
 ./government/About_LSC/LegalServCorp_v_VelazquezOpinion.txt:0
 ```
+
+When I ran the command, it counted the occurrence of the word "report" in files under the directory `technical`, and then it showed the output to the first 10 lines. This command is useful since it can quickly find out where specific keywords or phrases occur in multiple files within a director, it also counts the occurrence of the keywords in each file.
