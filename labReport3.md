@@ -96,4 +96,53 @@ Running this command searches for the occurrences of the word "report" in files 
 By using this command, we are able to effectively find the files where the word "report" occurs most frequently and display the top 10 files based on the count of occurrences.
 
 
-- -l: displays only filenames that contain the pattern
+- -l: Displays list of filenames only.
+
+```
+harry@HarrydeMacBook-Pro technical % grep -l -r "report" | head -n 10
+./government/About_LSC/Progress_report.txt
+./government/About_LSC/Strategic_report.txt
+./government/About_LSC/Comments_on_semiannual.txt
+./government/About_LSC/Special_report_to_congress.txt
+./government/About_LSC/commission_report.txt
+./government/About_LSC/ONTARIO_LEGAL_AID_SERIES.txt
+./government/About_LSC/diversity_priorities.txt
+./government/About_LSC/reporting_system.txt
+./government/About_LSC/State_Planning_Report.txt
+./government/About_LSC/Protocol_Regarding_Access.txt
+```
+
+It searches for files that contain "report" under the `technical` directory and displays the names of the first 10 files found. It is useful since it helps quickly identify files containing the specific keyword within their content under the current directory.
+
+```
+harry@HarrydeMacBook-Pro technical % grep -l -r "report" | xargs grep -c "report" | sort -t ":" -k 2 -n | head -n 10
+./biomed/1471-2091-2-7.txt:1
+./biomed/1471-2091-3-15.txt:1
+./biomed/1471-2091-3-22.txt:1
+./biomed/1471-2091-3-8.txt:1
+./biomed/1471-2091-4-1.txt:1
+./biomed/1471-2105-1-1.txt:1
+./biomed/1471-2105-2-1.txt:1
+./biomed/1471-2105-3-12.txt:1
+./biomed/1471-2105-3-16.txt:1
+./biomed/1471-2105-3-2.txt:1
+```
+
+This is a complex command since it uses `|` to combine four commands to achieve the goal of finding the top 10 files with the most occurrences of the specific keyword "report". It is useful since it helps identify files where the specific keyword "report" appears most frequently, which allows users to prioritize these files further.
+
+
+- -n: Display the matched lines and their line numbers.
+
+```
+harry@HarrydeMacBook-Pro technical % grep -n -r "report" | head -n 10
+./government/About_LSC/Progress_report.txt:9:I am pleased to submit to you our report concerning the progress
+./government/About_LSC/Progress_report.txt:11:Planning Team with some statistical and reporting assistance from
+./government/About_LSC/Progress_report.txt:14:I would like to put this report in its proper perspective. We
+./government/About_LSC/Progress_report.txt:36:news, however, can be found in reports like this one. Reports that
+./government/About_LSC/Progress_report.txt:56:This report demonstrates that our grantees and the broader equal
+./government/About_LSC/Progress_report.txt:71:report that would be gathering dust on a shelf down in our
+./government/About_LSC/Progress_report.txt:73:I think this report shows that we have had an inordinately
+./government/About_LSC/Progress_report.txt:378:Grant conditions, riders, or reporting requirements are being
+./government/About_LSC/Progress_report.txt:382:calling on each state to evaluate and report on their state
+./government/About_LSC/Progress_report.txt:623:training, evaluations, periodic reports, staffing on-going support,
+```
