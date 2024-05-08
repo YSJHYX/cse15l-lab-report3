@@ -150,6 +150,7 @@ harry@HarrydeMacBook-Pro technical % grep -n -r "report" | head -n 10
 This command searches for the specific keyword "report" under the directory `technical` and shows the matching lines and the corresponding line numbers. This is useful since it can quickly identify where the specific keyword "report" appears in files and in what content.
 
 ```
+harry@HarrydeMacBook-Pro technical % grep -c -r "successful" | sort -t ":" -k 2 -n | tail -n 1 | cut -d ":" -f 1 | xargs grep -n "successful"
 199:successful outcomes. The first knowledge point occurs when the
 222:probability of successful cost and schedule outcomes. Problems
 257:control before committing to full production. The more successful
@@ -182,4 +183,6 @@ This command searches for the specific keyword "report" under the directory `tec
 2367:measure design stability and process controls. Third, successful
 ```
 
-The command
+The command searches for the specific keyword "successful" within files under the `technical` directory, counts the occurrences of this keyword in each file, sorts the file names in numerical order, selects the last file, extracts its file name, and finally searches or the occurrences of the keyword within the specific file, also shows their line numbers. It is useful for identifying the file with the highest count of occurrences of the specific keyword "successful" and shows the occurrences of "successful" within that file, along with their line numbers.
+
+- -L:
