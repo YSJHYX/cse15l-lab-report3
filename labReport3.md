@@ -146,3 +146,40 @@ harry@HarrydeMacBook-Pro technical % grep -n -r "report" | head -n 10
 ./government/About_LSC/Progress_report.txt:382:calling on each state to evaluate and report on their state
 ./government/About_LSC/Progress_report.txt:623:training, evaluations, periodic reports, staffing on-going support,
 ```
+
+This command searches for the specific keyword "report" under the directory `technical` and shows the matching lines and the corresponding line numbers. This is useful since it can quickly identify where the specific keyword "report" appears in files and in what content.
+
+```
+199:successful outcomes. The first knowledge point occurs when the
+222:probability of successful cost and schedule outcomes. Problems
+257:control before committing to full production. The more successful
+332:companies had more successful outcomes. For example, the AIM-9X and
+418:DOD programs that had more successful outcomes used key best
+430:On the other hand, DOD programs with less successful outcomes
+460:facilitate better decisions and more successful acquisition program
+535:process, specifically product development and ways to successfully
+600:points 2 and 3, particularly at how successful companies design and
+609:have successful cost and schedule outcomes. Programs that do not
+673:that have led to more successful product development and production
+682:practices that resulted in successful product development. We
+706:turbines, derived from its successful jet engine programs, for
+850:considered them to be in two basic categories-successful and
+851:unsuccessful cost and schedule performance outcomes. This basis for
+943:We found that the most successful programs had taken steps to
+955:validated before committing to production. The most successful DOD
+966:successful cases had captured. They increased investments in
+1004:basis, we believe other factors contributed to a successful
+1086:processes than more successful cases. For example, at its limited
+1111:successful programs that the product can be manufactured within
+1123:Leading commercial companies have been successful in achieving
+1166:had relatively successful outcomes. The other DOD
+1233:more successfully and cost-effectively develop new, but
+1243:had relatively successful cost and schedule outcomes. They
+1526:making the prototypes a key ingredient to successful outcomes.
+1813:successful production outcome to date. Program officials took steps
+2035:successful acquisition program outcomes. As demonstrated by
+2036:successful companies, using these criteria can help ensure that the
+2367:measure design stability and process controls. Third, successful
+```
+
+The command
