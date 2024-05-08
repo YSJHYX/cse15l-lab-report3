@@ -185,4 +185,18 @@ harry@HarrydeMacBook-Pro technical % grep -c -r "successful" | sort -t ":" -k 2 
 
 The command searches for the specific keyword "successful" within files under the `technical` directory, counts the occurrences of this keyword in each file, sorts the file names in numerical order, selects the last file, extracts its file name, and finally searches or the occurrences of the keyword within the specific file, also shows their line numbers. It is useful for identifying the file with the highest count of occurrences of the specific keyword "successful" and shows the occurrences of "successful" within that file, along with their line numbers.
 
-- -L:
+- -h: Display the matched lines, but do not display the filenames.
+
+```
+grep -h -r "Mark" | head -n 10
+Mark Schacht, California Rural Legal Assistance Foundation)
+Endriss, Attorney at Law); March Comments at 82 (comment of Mark
+March Comments at 82 (comment of Mark Miller, American Friends
+(comment of Mark Miller, American Friends Service Committee); March
+Northwest Justice Project); March Comments at 76 (comment of Mark
+Talamantes, Attorney at Law); March Comments at 83 (comment of Mark
+Comments at 76-77 (comment of Mark Talamantes, Attorney at Law);
+April testimony at 80; March Comments at 76 (comment of Mark
+March Comments at 77 (comment of Mark Talamantes, Attorney at Law);
+Attorney at Law); March Comments at 77 (comment of Mark Talamantes,
+```
