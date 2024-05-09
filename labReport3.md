@@ -59,7 +59,7 @@ Original code:
 In the previous code, we changed elements in the old array `arr` by assigning each element in `arr` with the data of elements in the new array `newArray`. So, we switched `arr` and `newArray` in line 4, and made this method return `newArray`. In this way, the bug was successfully fixed and both these two inputs can pass the test.
 
 ## Part 2 - Researching Commands: grep
-- -c: This prints only a count of the lines that match a pattern.
+- `-c`: This prints only a count of the lines that match a pattern.
 
 ```
 harry@HarrydeMacBook-Pro technical % grep -c -r "report" | head -n 10
@@ -96,7 +96,7 @@ Running this command searches for the occurrences of the word "report" in files 
 By using this command, we are able to effectively find the files where the word "report" occurs most frequently and display the top 10 files based on the count of occurrences.
 
 
-- -l: Displays list of filenames only.
+- `-l`: Displays list of filenames only.
 
 ```
 harry@HarrydeMacBook-Pro technical % grep -l -r "report" | head -n 10
@@ -131,7 +131,7 @@ harry@HarrydeMacBook-Pro technical % grep -l -r "report" | xargs grep -c "report
 This is a complex command since it uses `|` to combine four commands to achieve the goal of finding the top 10 files with the most occurrences of the specific keyword "report". It is useful since it helps identify files where the specific keyword "report" appears most frequently, which allows users to prioritize these files further.
 
 
-- -n: Display the matched lines and their line numbers.
+- `-n`: Display the matched lines and their line numbers.
 
 ```
 harry@HarrydeMacBook-Pro technical % grep -n -r "report" | head -n 10
@@ -185,7 +185,7 @@ harry@HarrydeMacBook-Pro technical % grep -c -r "successful" | sort -t ":" -k 2 
 
 The command searches for the specific keyword "successful" within files under the `technical` directory and its subdirectories, counts the occurrences of this keyword in each file, sorts the filenames in numerical order, selects the last file, extracts its filename, and finally searches or the occurrences of the keyword within the specific file, also shows their line numbers. It is useful for identifying the file with the highest count of occurrences of the specific keyword "successful" and shows the occurrences of "successful" within that file, along with their line numbers.
 
-- -h: Display the matched lines, but do not display the filenames.
+- `-h`: Display the matched lines, but do not display the filenames.
 
 ```
 harry@HarrydeMacBook-Pro technical % grep -h -r "Mark" | head -n 10
